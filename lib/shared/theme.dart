@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+double defaultMargin = 24.0;
+double defaultRadius = 17.0;
+
 // Color
 Color purpleColor = Color(0xff5C40CC);
 Color blackColor = Color(0xff1F1449);

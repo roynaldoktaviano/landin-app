@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landin/ui/widgets/button_cta.dart';
 import '../../shared/theme.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -93,31 +94,6 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
-      Widget submitButton() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: 10,
-          ),
-          width: double.infinity,
-          height: 55,
-          child: TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-                backgroundColor: purpleColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(defaultRadius),
-                )),
-            child: Text(
-              'Get Started',
-              style: whiteFonts.copyWith(
-                fontSize: 18,
-                fontWeight: medium,
-              ),
-            ),
-          ),
-        );
-      }
-
       return Container(
         margin: EdgeInsets.only(
           top: 30,
@@ -136,7 +112,12 @@ class SignUpPage extends StatelessWidget {
             inputText('Email', 'Your Email'),
             inputPassword('Password', 'Your Password'),
             inputText('Hobby', 'Your Hobby'),
-            submitButton(),
+            ButtonCTA(
+              title: 'Get Started',
+              onPressed: () {
+                Navigator.pushNamed(context, '/bonus');
+              },
+            ),
           ],
         ),
       );

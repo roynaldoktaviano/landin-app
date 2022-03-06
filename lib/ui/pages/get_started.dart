@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landin/ui/widgets/button_cta.dart';
 import '../../shared/theme.dart';
 
 class GetStartedPage extends StatelessWidget {
@@ -42,31 +43,17 @@ class GetStartedPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Container(
+                ButtonCTA(
+                  width: 220,
+                  title: 'Get Started',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/sign-up');
+                  },
                   margin: EdgeInsets.only(
                     top: 50,
                     bottom: 80,
                   ),
-                  width: 220,
-                  height: 55,
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/sign-up');
-                    },
-                    child: Text(
-                      'Get Started',
-                      style: whiteFonts.copyWith(
-                        fontSize: 18,
-                        fontWeight: medium,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                        backgroundColor: purpleColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        )),
-                  ),
-                )
+                ),
               ],
             ),
           ),

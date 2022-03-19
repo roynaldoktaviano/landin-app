@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landin/ui/widgets/button_cta.dart';
+import 'package:landin/ui/widgets/textfield_custom.dart';
 import '../../shared/theme.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -21,76 +22,11 @@ class SignUpPage extends StatelessWidget {
     }
 
     Widget inputForm() {
-      Widget inputText(String inputTitle, String placeholder) {
-        return Container(
-          margin: EdgeInsets.only(
-            bottom: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                inputTitle,
-                style: blackFonts.copyWith(
-                  fontSize: 14,
-                  fontWeight: regular,
-                ),
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              TextFormField(
-                cursorColor: blackColor,
-                decoration: InputDecoration(
-                    hintText: placeholder,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(
-                          color: purpleColor,
-                        ))),
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget inputPassword(String inputTitle, String placeholder) {
-        return Container(
-          margin: EdgeInsets.only(
-            bottom: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                inputTitle,
-                style: blackFonts.copyWith(
-                  fontSize: 14,
-                  fontWeight: regular,
-                ),
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              TextFormField(
-                obscureText: true,
-                cursorColor: blackColor,
-                decoration: InputDecoration(
-                    hintText: placeholder,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                        borderSide: BorderSide(
-                          color: purpleColor,
-                        ))),
-              ),
-            ],
-          ),
+      Widget textField(String inputTitle, String placeholder, bool obsecure) {
+        return TextFieldCust(
+          label: inputTitle,
+          hintText: placeholder,
+          obsecureText: obsecure,
         );
       }
 
@@ -108,10 +44,10 @@ class SignUpPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            inputText('Full Name', 'Your Full Name'),
-            inputText('Email', 'Your Email'),
-            inputPassword('Password', 'Your Password'),
-            inputText('Hobby', 'Your Hobby'),
+            textField('Full Name', 'Your Full Name', false),
+            textField('Email', 'Your Email', false),
+            textField('Password', 'Your Password', true),
+            textField('Hobby', 'Your Hobby', false),
             ButtonCTA(
               title: 'Get Started',
               onPressed: () {

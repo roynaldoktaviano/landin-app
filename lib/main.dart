@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:landin/ui/pages/bonus_page.dart';
 import 'package:landin/ui/pages/get_started.dart';
+import 'package:landin/ui/pages/home_page.dart';
 import 'package:landin/ui/pages/main_pages.dart';
 import 'package:landin/ui/pages/sign_up.dart';
 import 'package:landin/ui/pages/splash_page.dart';
@@ -18,6 +19,7 @@ class myApp extends StatelessWidget {
         '/sign-up': (context) => SignUpPage(),
         '/bonus': (context) => BonusPage(),
         '/main': (context) => MainPage(),
+        '/home': (context) => HomePage(),
       },
     );
   }

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:landin/ui/pages/home_page.dart';
 import 'package:landin/ui/widgets/button_nav.dart';
 import '../../shared/theme.dart';
 
 class MainPage extends StatelessWidget {
+  Widget buildContent() {
+    return HomePage();
+  }
+
   Widget customBottomNav() {
     return Align(
       alignment: Alignment.bottomCenter,
@@ -40,9 +45,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       body: Stack(
         children: [
-          Text(
-            'Main Pages',
-          ),
+          buildContent(),
           customBottomNav(),
         ],
       ),

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "719284599611",
+    "project_id": "landin-c8abd",
+    "storage_bucket": "landin-c8abd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719284599611:android:8e1cca886d08fc6b36551e",
+        "android_client_info": {
+          "package_name": "com.roynald.landin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719284599611-v5t3l8v0f4osn25ecq7pgko6oodm0go2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMdWt4Ma7BgnfGtg7AV_GeiI4CdFOyRiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719284599611-v5t3l8v0f4osn25ecq7pgko6oodm0go2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

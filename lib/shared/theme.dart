@@ -13,6 +13,8 @@ Color redColor = Color(0xffEB70A5);
 Color backgroundColor = Color(0xffFAFAFA);
 Color inactiveColor = Color(0xffDBD7EC);
 Color transparant = Colors.transparent;
+Color seatUnavailable = Color(0xffEBECF1);
+Color seatAvailable = Color(0xffE0D9FF);
 
 // Textstyle
 TextStyle blackFonts = GoogleFonts.poppins(
